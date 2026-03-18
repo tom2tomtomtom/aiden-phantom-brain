@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AIDEN - The Phantom Brain</title>
+
+<!-- OG Meta Tags -->
+<meta property="og:title" content="THE PHANTOM BRAIN">
+<meta property="og:description" content="396 personality fragments. Zero sycophancy. How AIDEN thinks differently.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tom2tomtomtom.github.io/aiden-phantom-brain/">
+<meta property="og:image" content="https://tom2tomtomtom.github.io/aiden-phantom-brain/phantom-wide.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE PHANTOM BRAIN">
+<meta name="twitter:description" content="396 personality fragments. Zero sycophancy. How AIDEN thinks differently.">
+<meta name="twitter:image" content="https://tom2tomtomtom.github.io/aiden-phantom-brain/phantom-wide.png">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
 
@@ -1071,6 +1084,25 @@
     letter-spacing: 0.05em;
   }
 
+  .recursive-footnote {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--grey-mid);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 1.2s ease 1.5s;
+  }
+
+  .slide-closing.visible .recursive-footnote {
+    opacity: 1;
+  }
+
   /* ============================================ */
   /* NAV DOTS                                     */
   /* ============================================ */
@@ -1609,6 +1641,7 @@
   <h1 class="fade-up red" style="transition-delay:0.2s">ZERO SYCOPHANCY.</h1>
   <div class="closing-line fade-up" style="transition-delay:0.4s"></div>
   <p class="subtitle fade-up" style="transition-delay:0.6s">AIDEN doesn't agree with you. It challenges you.</p>
+  <div class="recursive-footnote">This presentation's copy was shaped by the Phantom Brain system</div>
 </section>
 
 <!-- ============================================ -->
