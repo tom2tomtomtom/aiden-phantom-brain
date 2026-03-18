@@ -372,6 +372,118 @@
   }
 
   /* ============================================ */
+  /* ACTIVATION DEMO                              */
+  /* ============================================ */
+  .activation-demo {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .demo-input, .demo-output {
+    width: 100%;
+    padding: 24px 28px;
+    border: 1px solid var(--grey-dark);
+    border-radius: 4px;
+    background: var(--black-card);
+    position: relative;
+  }
+
+  .demo-input { border-left: 3px solid var(--grey-mid); }
+  .demo-output { border-left: 3px solid var(--red); }
+
+  .demo-label {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey-light);
+    margin-bottom: 8px;
+  }
+
+  .demo-input p, .demo-output p {
+    font-size: 1.1rem;
+    color: var(--grey-pale);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .demo-output .demo-label { color: var(--red); }
+  .demo-output p { color: var(--white); font-style: normal; font-weight: 500; }
+
+  .demo-arrow {
+    font-size: 1.5rem;
+    color: var(--red);
+    opacity: 0.6;
+    line-height: 1;
+  }
+
+  .demo-phantoms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .demo-phantom {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    background: var(--black-card);
+    border: 1px solid var(--grey-dark);
+    border-radius: 4px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .demo-phantom:hover {
+    border-color: var(--red);
+    background: rgba(255, 51, 51, 0.05);
+  }
+
+  .demo-phantom-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--orange);
+    white-space: nowrap;
+    min-width: 180px;
+  }
+
+  .demo-phantom-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--red);
+    background: rgba(255, 51, 51, 0.1);
+    padding: 2px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .demo-phantom-inf {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--grey-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .demo-phantom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .demo-phantom-name { min-width: auto; }
+  }
+
+  /* ============================================ */
   /* SLIDE 4: SCREENSHOT                          */
   /* ============================================ */
   .slide-screenshot {
@@ -1111,24 +1223,36 @@
 <!-- SLIDE 3: 335 PERSONALITY FRAGMENTS           -->
 <!-- ============================================ -->
 <section class="slide" id="s3">
-  <div class="section-label fade-up">335 Personality Fragments</div>
+  <div class="section-label fade-up">396 Personality Fragments</div>
   <div class="section-line fade-up"></div>
-  <p class="body-text fade-up">Not a prompt. Not a persona. A constellation of phantom memories that shape every response.</p>
-  <div class="phantom-cards stagger">
-    <div class="phantom-card">
-      <div class="name">TENSION&#8594;GOLD</div>
-      <div class="influence">MINE_CULTURAL_CONTRADICTIONS</div>
-      <div class="story">"Every culture holds contradictions: we want authenticity but perform constantly."</div>
+  <p class="body-text fade-up">Not a prompt. Not a persona. A constellation of phantom memories that shape every response. Here's what happens when you say:</p>
+  <div class="activation-demo fade-up" style="transition-delay:0.3s">
+    <div class="demo-input">
+      <span class="demo-label">USER</span>
+      <p>"We need something disruptive for this campaign"</p>
     </div>
-    <div class="phantom-card">
-      <div class="name">GARAGE&#8594;EMPIRE</div>
-      <div class="influence">CHALLENGE_SCALE_ASSUMPTIONS</div>
-      <div class="story">"The best ideas start in garages. The worst ideas start in boardrooms."</div>
+    <div class="demo-arrow">&#8595;</div>
+    <div class="demo-phantoms stagger">
+      <div class="demo-phantom">
+        <span class="demo-phantom-name">REJECT&#8594;BUZZWORDS</span>
+        <span class="demo-phantom-score">0.92</span>
+        <span class="demo-phantom-inf">CALL_OUT_EMPTY_LANGUAGE</span>
+      </div>
+      <div class="demo-phantom">
+        <span class="demo-phantom-name">TENSION&#8594;GOLD</span>
+        <span class="demo-phantom-score">0.85</span>
+        <span class="demo-phantom-inf">MINE_CULTURAL_CONTRADICTIONS</span>
+      </div>
+      <div class="demo-phantom">
+        <span class="demo-phantom-name">GARAGE&#8594;EMPIRE</span>
+        <span class="demo-phantom-score">0.71</span>
+        <span class="demo-phantom-inf">CHALLENGE_SCALE_ASSUMPTIONS</span>
+      </div>
     </div>
-    <div class="phantom-card">
-      <div class="name">KNIFE&#8594;EDIT</div>
-      <div class="influence">KILL_WEAK_IDEAS</div>
-      <div class="story">"Kill your darlings ruthlessly. Every good thing you cut makes what remains stronger."</div>
+    <div class="demo-arrow">&#8595;</div>
+    <div class="demo-output">
+      <span class="demo-label">AIDEN</span>
+      <p>"Everyone says they want disruption until you show them what it actually looks like. What you're really asking for is something that feels edgy in the boardroom but safe on the billboard. Which one do you actually want?"</p>
     </div>
   </div>
 </section>
@@ -1481,7 +1605,7 @@
     <div class="particle" style="width:400px;height:400px;top:10%;left:50%;animation-delay:-3s;background:var(--red);"></div>
     <div class="particle" style="width:200px;height:200px;top:60%;left:30%;animation-delay:-1s;"></div>
   </div>
-  <h1 class="fade-up glitch">335 PHANTOMS.</h1>
+  <h1 class="fade-up glitch">396 PHANTOMS.</h1>
   <h1 class="fade-up red" style="transition-delay:0.2s">ZERO SYCOPHANCY.</h1>
   <div class="closing-line fade-up" style="transition-delay:0.4s"></div>
   <p class="subtitle fade-up" style="transition-delay:0.6s">AIDEN doesn't agree with you. It challenges you.</p>
