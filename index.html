@@ -262,6 +262,62 @@
   }
 
   /* ============================================ */
+  /* SLIDE 2: BIG PROBLEM STATEMENT               */
+  /* ============================================ */
+  .slide-problem-hero {
+    text-align: center;
+    align-items: center;
+  }
+
+  .problem-hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .problem-hero-text span {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--white);
+  }
+
+  .problem-hero-text span:nth-child(2) {
+    color: var(--grey-pale);
+  }
+
+  .problem-hero-text span:nth-child(3) {
+    color: var(--grey-mid);
+  }
+
+  /* ============================================ */
+  /* SLIDE 2B: WHAT IF                            */
+  /* ============================================ */
+  .slide-whatif {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 50%, #0d0505 0%, var(--black) 70%);
+  }
+
+  .whatif-text {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--grey-pale);
+    max-width: 800px;
+    letter-spacing: -0.01em;
+  }
+
+  .whatif-text .red {
+    font-weight: 700;
+    color: var(--red);
+  }
+
+  /* ============================================ */
   /* SLIDE 3: PHANTOM CARDS                       */
   /* ============================================ */
   .phantom-cards {
@@ -1028,16 +1084,24 @@
 </section>
 
 <!-- ============================================ -->
-<!-- SLIDE 2: THE PROBLEM                         -->
+<!-- SLIDE 2: THE PROBLEM (big statement)         -->
 <!-- ============================================ -->
-<section class="slide" id="s2">
+<section class="slide slide-problem-hero" id="s2">
   <div class="section-label fade-up">AI Has A Personality Problem</div>
-  <div class="section-line fade-up"></div>
-  <div class="stagger">
-    <div class="problem-item">Every AI tool gives the same safe, agreeable, forgettable response.</div>
-    <div class="problem-item">Ask 5 AI tools the same brief. Get 5 versions of the same idea.</div>
-    <div class="problem-item">No backbone. No taste. No point of view.</div>
-    <div class="problem-item highlight">"Bold" and "unexpected" are words focus groups use when they're being polite about bad ideas.</div>
+  <div class="problem-hero-text">
+    <span class="fade-up" style="transition-delay:0.1s">No backbone.</span>
+    <span class="fade-up" style="transition-delay:0.3s">No taste.</span>
+    <span class="fade-up" style="transition-delay:0.5s">No point of view.</span>
+  </div>
+  <p class="body-text fade-up" style="transition-delay:0.8s;margin-top:40px;text-align:center;max-width:600px;align-self:center">"Bold" and "unexpected" are words focus groups use when they're being polite about bad ideas.</p>
+</section>
+
+<!-- ============================================ -->
+<!-- SLIDE 2B: WHAT IF                            -->
+<!-- ============================================ -->
+<section class="slide slide-whatif" id="s2b">
+  <div class="whatif-text fade-up">
+    What if the power of LLMs like <span class="red">Claude Opus</span> had a frontal cortex with <span class="red">30 years</span> of personal experience?
   </div>
 </section>
 
